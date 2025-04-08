@@ -8,7 +8,7 @@
     .mySlides {
       display: none;
       position: relative;
-      height: 540px; /* Reduced height since we're reducing padding */
+      height: 520px; /* Further reduced height */
       text-align: center;
     }
 
@@ -23,13 +23,14 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      padding-bottom: 2px; /* Minimal padding below images */
+      padding-bottom: 0; /* No padding below images */
     }
     
     .slide-image {
       max-height: 100%;
       max-width: 100%;
       object-fit: contain; /* Maintains aspect ratio */
+      margin-bottom: 0;
     }
 
     /* Slideshow container */
@@ -71,12 +72,13 @@
     .text {
       color: #f5f4f2;
       font-size: 12px;
-      padding: 10px 20px;
+      padding: 0 20px;
       width: 100%;
       text-align: center;
       position: absolute;
       bottom: 0;
-      margin-top: 0; /* No extra spacing above the caption */
+      margin-top: 0;
+      margin-bottom: 5px;
     }
 
     /* Number text (1/3 etc) */
