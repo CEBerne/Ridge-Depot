@@ -5,10 +5,10 @@
   <style>
     * {box-sizing: border-box}
     body {font-family: Verdana, sans-serif; margin:0}
+    
     .mySlides {
       display: none;
       position: relative;
-      height: 520px; /* Further reduced height */
       text-align: center;
     }
 
@@ -18,19 +18,19 @@
     
     /* Image styling for consistent height */
     .slide-image-container {
-      height: 500px; /* Fixed height for all images */
+      position: relative;
+      max-height: 500px; /* Maximum height for all images */
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      padding-bottom: 0; /* No padding below images */
     }
     
     .slide-image {
       max-height: 100%;
       max-width: 100%;
       object-fit: contain; /* Maintains aspect ratio */
-      margin-bottom: 0;
+      display: block;
     }
 
     /* Slideshow container */
@@ -55,6 +55,7 @@
       border-radius: 0 3px 3px 0;
       user-select: none;
       background-color: rgba(0,0,0,0.3); /* Added slight background for visibility */
+      z-index: 10; /* Ensure buttons are above other elements */
     }
 
     /* Position the "next button" to the right */
@@ -72,13 +73,11 @@
     .text {
       color: #f5f4f2;
       font-size: 12px;
-      padding: 0 20px;
+      padding: 5px 20px;
       width: 100%;
       text-align: center;
-      position: absolute;
-      left: 0;
-      margin: 0;
-      top: 500px;
+      position: relative;
+      margin-top: 2px; /* Very small gap between image and caption */
     }
 
     /* Number text (1/3 etc) */
@@ -90,6 +89,7 @@
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 5;
     }
 
     /* The dots/bullets/indicators */
