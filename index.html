@@ -10,6 +10,7 @@
       display: none;
       position: relative;
       text-align: center;
+      height: 450px; /* Fixed height container including caption */
     }
 
     a {
@@ -19,7 +20,7 @@
     /* Image styling for consistent height */
     .slide-image-container {
       position: relative;
-      max-height: 500px; /* Maximum height for all images */
+      height: 400px; /* Fixed height for image container */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -44,7 +45,7 @@
     .prev, .next {
       cursor: pointer;
       position: absolute;
-      top: 50%;
+      top: 200px; /* Fixed position at exact center of image container */
       width: auto;
       padding: 16px;
       margin-top: -22px;
